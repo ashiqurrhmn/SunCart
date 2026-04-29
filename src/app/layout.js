@@ -14,16 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${outfit.className} h-full antialiased`}
-    >
+    <html lang="en" className={`${outfit.className} h-full antialiased`}>
       <body>
         <Navbar />
-        {children}
+        <main className="w-9/12 mx-auto">{children}</main>
         <Footer />
-        </body>
-        
+      </body>
     </html>
   );
 }

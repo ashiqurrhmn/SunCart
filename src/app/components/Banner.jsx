@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <section className="w-full">
 
-      <div className="w-9/12 mx-auto px-4 sm:px-8 py-8 sm:py-12 md:py-16 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
+      <div className="px-4 sm:px-8 py-8 sm:py-12 md:py-16 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
 
         <div className="flex-1 text-center lg:text-left">
           <h2 className="text-lg sm:text-2xl md:text-3xl font-medium mb-2 text-gray-800">
