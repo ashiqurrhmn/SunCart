@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "ibb.co.com"
+        hostname: "i.ibb.co.com"
       }
     ]
   }
