@@ -1,5 +1,6 @@
 import { Button, Card, Separator } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaRegStar } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
@@ -11,7 +12,7 @@ const ProductCard = ({ product }) => {
             src={product.image}
             alt={product.name}
             fill
-             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="rounded-lg object-cover"
           />
         </div>
@@ -20,15 +21,23 @@ const ProductCard = ({ product }) => {
           <Separator className="w-full my-3" />
           <div className="w-full flex items-center justify-between mt-2">
             <p className="text-gray-600 flex items-center gap-1 font-semibold">
-              <span className="text-orange-500 font-semibold"><FaRegStar /></span> {product.rating}{" "}
+              <span className="text-orange-500 font-semibold">
+                <FaRegStar />
+              </span>{" "}
+              {product.rating}{" "}
             </p>
             <h4 className="text-lg font-semibold">
               ${product.price.toFixed(2)}
             </h4>
           </div>
-            <Button variant="outline" className="w-full mt-4 border border-orange-500 text-orange-500 px-3 py-2 rounded-2xl">
+          <Link href={`/${product.id}`}>
+            <Button
+              variant="outline"
+              className="w-full mt-4 border border-orange-500 text-orange-500 px-3 py-2 rounded-2xl"
+            >
               View Details
             </Button>
+          </Link>
         </div>
       </div>
     </Card>

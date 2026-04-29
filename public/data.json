@@ -60,7 +60,7 @@
     "brand": "FreshSip",
     "price": 6,
     "rating": 4.2,
-    "stock": 30,
+    "stock": 0,
     "description": "Refreshing cold drinks combo to beat the summer heat.",
     "image": "https://i.ibb.co.com/CK80PQSs/n41-98d15fc2-bd74-4509-ad77-e30b6e838d55.jpg",
     "category": "Beverages"
@@ -71,7 +71,7 @@
     "brand": "EasyWalk",
     "price": 9,
     "rating": 4.1,
-    "stock": 22,
+    "stock": 0,
     "description": "Comfortable flip flops for casual summer outings.",
     "image": "https://i.ibb.co.com/nN9M20jv/KIMMIE-1-BLKSDE1.jpg",
     "category": "Footwear"
