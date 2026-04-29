@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="border-b px-2">
       <nav className=" flex justify-between items-center  py-3 w-9/12 mx-auto">
         <div className="flex gap-2 items-center">
-          <h2 className="text-xl font-extrabold">SunCart</h2>
+          <h2 className="text-xl font-extrabold">Sun<span className="text-orange-500">Cart</span></h2>
         </div>
 
         <ul className="hidden md:flex font-medium items-center gap-5 text-sm">

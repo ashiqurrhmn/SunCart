@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://ibb.co.com/Nnx1sNgx",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Cotton Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Lightweight and breathable cotton t-shirt for hot days.",
+    "image": "https://ibb.co.com/mrx7V68N",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Beach Cap",
+    "brand": "SunStyle",
+    "price": 8,
+    "rating": 4.3,
+    "stock": 25,
+    "description": "Comfortable cap to protect you from direct sunlight.",
+    "image": "https://ibb.co.com/rTsZhn2",
+    "category": "Accessories"
+  },
+  {
+    "id": 4,
+    "name": "Men's Half Pant",
+    "brand": "UrbanFit",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Trendy and comfortable half pant for summer wear.",
+    "image": "https://ibb.co.com/BVMzztSx",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "Tank Top",
+    "brand": "FitFlex",
+    "price": 10,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Sleeveless tank top perfect for gym and summer days.",
+    "image": "https://ibb.co.com/3mjqZsV7",
+    "category": "Clothing"
+  },
+  {
+    "id": 6,
+    "name": "Cold Drink Combo Pack",
+    "brand": "FreshSip",
+    "price": 6,
+    "rating": 4.2,
+    "stock": 30,
+    "description": "Refreshing cold drinks combo to beat the summer heat.",
+    "image": "https://ibb.co.com/B23snBYK",
+    "category": "Beverages"
+  },
+  {
+    "id": 7,
+    "name": "Flip Flop Sandals",
+    "brand": "EasyWalk",
+    "price": 9,
+    "rating": 4.1,
+    "stock": 22,
+    "description": "Comfortable flip flops for casual summer outings.",
+    "image": "https://ibb.co.com/Q3LvBcMR",
+    "category": "Footwear"
+  },
+  {
+    "id": 8,
+    "name": "Summer Combo Pack",
+    "brand": "SunCart",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Combo pack including t-shirt, cap, and sunglasses.",
+    "image": "https://ibb.co.com/QFwHGWqG",
+    "category": "Combo"
+  }
+]
