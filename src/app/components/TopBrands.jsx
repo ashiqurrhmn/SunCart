@@ -42,7 +42,7 @@ const TopBrands = () => {
           {brands.map((brand, index) => (
             <Card
               key={index}
-              className="bg-gray-50 rounded-2xl p-8 text-center shadow-lg"
+              className="bg-gray-50 rounded-2xl p-3 md:p-5 lg:p-8 text-center shadow-lg"
             >
               <div className="relative w-full aspect-square mb-3">
                 <Image
