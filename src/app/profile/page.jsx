@@ -3,6 +3,7 @@
 import { UpdateProfileForm } from "@/components/UpdateProfileForm";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Card } from "@heroui/react";
+import 'animate.css';
 
 const ProfilePage = () => {
   const userData = authClient.useSession();
@@ -16,7 +17,7 @@ const ProfilePage = () => {
   }
   return (
     <div className="my-30 flex items-center justify-center px-4">
-      <Card className="w-full bg-orange-50 max-w-md pt-20 shadow-xl text-center">
+      <Card className="animate__animated animate__bounce animate w-full bg-orange-50 max-w-md pt-20 shadow-xl text-center">
         <div className="flex justify-center mb-4">
           <Avatar className="w-30 h-30 text-lg">
             <Avatar.Image
