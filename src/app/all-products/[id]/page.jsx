@@ -11,7 +11,6 @@ const ProductDetails = async ({ params }) => {
   return (
     <div className="min-h-screen mt-20">
       <div>
-        
         <Card className="bg-gray-50 rounded-2xl shadow-lg">
           <div className="grid md:grid-cols-2 gap-8 p-3 md:p-10">
             <div className="relative w-full aspect-square">
@@ -31,7 +30,9 @@ const ProductDetails = async ({ params }) => {
 
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex items-center">
-                  <span className="text-yellow-400 text-lg"><FaRegStar /></span>
+                  <span className="text-yellow-400 text-lg">
+                    <FaRegStar />
+                  </span>
                   <span className="ml-1 text-gray-600 font-medium">
                     {product.rating}
                   </span>
@@ -74,10 +75,10 @@ const ProductDetails = async ({ params }) => {
               </div>
 
               <div className="flex gap-4 mt-auto">
-                <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-xl font-semibold">
+                <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-1 px-2 md:py-3 md:px-6 rounded-xl font-semibold">
                   Add to Cart
                 </button>
-                <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-xl font-semibold">
+                <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 py-1 px-2 md:py-3 md:px-6 rounded-xl font-semibold">
                   Buy Now
                 </button>
               </div>
