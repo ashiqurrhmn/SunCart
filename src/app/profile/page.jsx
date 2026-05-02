@@ -7,7 +7,6 @@ import { Avatar, Card } from "@heroui/react";
 const ProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
-  console.log(user);
   if (!user) {
     return (
       <p className="text-center flex justify-center items-center text-4xl min-h-screen text-orange-500">

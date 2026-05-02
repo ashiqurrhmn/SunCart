@@ -5,6 +5,7 @@ import { Envelope } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 import { CgProfile } from "react-icons/cg";
 import { CiEdit } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 export function UpdateProfileForm() {
   const onSubmit = async (e) => {
@@ -15,6 +16,7 @@ export function UpdateProfileForm() {
     const image = formData.get("image")?.trim();
 
     if (!name && !image) {
+         toast.warning("Nothing to update!");
       return;
     }
     const updateData = {};
@@ -23,6 +25,7 @@ export function UpdateProfileForm() {
     if (image) updateData.image = image;
 
     await authClient.updateUser(updateData);
+    toast.success("Profile updated successfully!");
   };
   return (
     <Modal>

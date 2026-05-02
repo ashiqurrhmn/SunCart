@@ -14,21 +14,32 @@ import {
 import Link from "next/link";
 import { GoOrganization } from "react-icons/go";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const name = e.target.name.value;
-    const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    try {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
       callbackURL: "/",
     });
+
+    if (error) {
+      toast.error(error.message || "Login failed!");
+      return;
+    }
+
+    toast.success("Login successful!");
+
+  } catch (err) {
+    toast.error("Something went wrong!");
+  }
   };
 
   const handleGoogleSignIn = async () => {
@@ -114,11 +125,11 @@ export default function SignInPage() {
         </div>
         <div>
           <p className="text-center text-gray-500 text-sm mt-5">
-            {" "}
+            
             Don&apos;t have an account?{" "}
             <Link href={"/register"} className="text-orange-500">
               Register
-            </Link>{" "}
+            </Link>
           </p>
         </div>
       </Form>

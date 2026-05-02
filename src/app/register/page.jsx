@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -26,6 +27,7 @@ export default function RegisterPage() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    try {
     const { data, error } = await authClient.signUp.email({
       name,
       email,
@@ -33,9 +35,20 @@ export default function RegisterPage() {
       image,
     });
 
-    if (!error) {
-      router.push("/signin");
+    if (error) {
+      toast.error(error.message || "Registration failed!");
+      return;
     }
+
+    toast.success("Account created successfully!");
+
+    if(!error){
+        router.push("/signin");
+    }
+
+  } catch (err) {
+    toast.error("Something went wrong!");
+  }
   };
 
   const handleGoogleSignIn = async () => {
