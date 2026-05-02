@@ -8,7 +8,6 @@ import { RiMenu5Fill } from "react-icons/ri";
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
-  console.log(user);
 
   const handleSignOut = async () => {
     await authClient.signOut();
