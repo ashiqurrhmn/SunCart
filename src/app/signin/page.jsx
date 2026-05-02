@@ -12,7 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 
-export default function RegisterPage() {
+export default function SignInPage() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -21,44 +21,24 @@ export default function RegisterPage() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const {data, error} = await authClient.signUp.email({
-        name,
+    const {data, error} = await authClient.signIn.email({
         email,
         password,
-        image,
+        callbackURL: '/'
     });
 
     console.log({data, error});
   };
 
   return (
-    
-      
       <Card className="w-full mx-auto my-30 bg-orange-50 shadow-2xl max-w-md sm:max-w-lg md:max-w-xl py-6 sm:py-8 md:py-10 px-4 sm:px-6 md:px-8">
         
         <h1 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-orange-500 mb-4 sm:mb-6">
-          Register
+          Sign In
         </h1>
 
         <Form className="flex flex-col  gap-4" onSubmit={onSubmit}>
           
-          <TextField isRequired name="name" type="text">
-            <Label className="text-gray-700">Name</Label>
-            <Input
-              placeholder="Enter your name"
-              className="focus:ring-2 focus:ring-orange-400"
-            />
-            <FieldError />
-          </TextField>
-
-          <TextField isRequired name="image" type="text">
-            <Label className="text-gray-700">Image URL</Label>
-            <Input
-              placeholder="Image URL"
-              className="focus:ring-2 focus:ring-orange-400"
-            />
-            <FieldError />
-          </TextField>
 
           <TextField
             isRequired
@@ -112,7 +92,7 @@ export default function RegisterPage() {
             
             <Button type="submit" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white">
               <Check />
-              Register
+              Sign in
             </Button>
 
             <Button
