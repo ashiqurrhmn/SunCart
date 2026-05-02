@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 
 export default function SignInPage() {
   const onSubmit = async (e) => {
@@ -103,6 +104,9 @@ export default function SignInPage() {
               Reset
             </Button>
 
+          </div>
+          <div>
+            <p className="text-center text-gray-500 text-sm my-5"> Don&apos;t have an account? <Link href={"/register"} className="text-orange-500">Register</Link> </p>
           </div>
         </Form>
 

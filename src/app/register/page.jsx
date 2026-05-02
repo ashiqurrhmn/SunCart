@@ -11,8 +11,12 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
+    const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,6 +31,10 @@ export default function RegisterPage() {
         password,
         image,
     });
+
+    if(!error){
+        router.push('/signin');
+    }
 
     console.log({data, error});
   };
@@ -123,6 +131,9 @@ export default function RegisterPage() {
               Reset
             </Button>
 
+          </div>
+          <div>
+            <p className="text-center text-gray-500 text-sm my-5"> Already have an account? <Link href={"/signin"} className="text-orange-500">Sign in</Link> </p>
           </div>
         </Form>
 
