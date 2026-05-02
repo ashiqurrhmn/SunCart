@@ -9,14 +9,20 @@ import { CiEdit } from "react-icons/ci";
 export function UpdateProfileForm() {
   const onSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
-    const image = e.target.image.value;
 
-    await authClient.updateUser({
-        name,
-        image
-    })
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name")?.trim();
+    const image = formData.get("image")?.trim();
 
+    if (!name && !image) {
+      return;
+    }
+    const updateData = {};
+
+    if (name) updateData.name = name;
+    if (image) updateData.image = image;
+
+    await authClient.updateUser(updateData);
   };
   return (
     <Modal>
@@ -51,7 +57,13 @@ export function UpdateProfileForm() {
                     >
                       Cancel
                     </Button>
-                    <Button type="submit" slot="close" className="bg-orange-500">Submit</Button>
+                    <Button
+                      type="submit"
+                      slot="close"
+                      className="bg-orange-500"
+                    >
+                      Submit
+                    </Button>
                   </Modal.Footer>
                 </form>
               </Surface>
