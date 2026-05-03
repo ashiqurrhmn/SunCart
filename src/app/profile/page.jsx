@@ -8,13 +8,7 @@ import 'animate.css';
 const ProfilePage = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
-  if (!user) {
-    return (
-      <p className="text-center flex justify-center items-center text-4xl min-h-screen text-orange-500">
-        No user logged in
-      </p>
-    );
-  }
+ 
   return (
     <div className="my-30 flex items-center justify-center px-4">
       <Card className="animate__animated animate__bounce animate w-full bg-orange-50 max-w-md pt-20 shadow-xl text-center">

@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
               ${product.price.toFixed(2)}
             </h4>
           </div>
-          <Link href={`/${product.id}`}>
+          <Link href={`/all-products/${product.id}`}>
             <Button
               variant="outline"
               className="w-full mt-4 border border-orange-500 text-orange-500 px-3 py-2 rounded-2xl"
