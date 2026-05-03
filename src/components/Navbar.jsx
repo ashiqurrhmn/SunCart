@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { RiMenu5Fill } from "react-icons/ri";
 
@@ -9,14 +10,20 @@ const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
+   const pathname = usePathname();
+
   const handleSignOut = async () => {
     await authClient.signOut();
   }
 
   const [open, setOpen] = useState(false);
+   const navLink = (path) =>
+    pathname === path || pathname.startsWith(path + "/")
+      ? "text-orange-500 font-bold"
+      : "";
 
   return (
-    <div className="border-b px-2">
+    <div className="border-b px-2 fixed top-0 left-0 w-full z-50 bg-white">
       <nav className=" flex justify-between items-center  py-3 w-11/12 mx-auto">
         <div className="flex gap-2 items-center">
           <h2 className="text-xl font-extrabold">
@@ -26,13 +33,13 @@ const Navbar = () => {
 
         <ul className="hidden md:flex font-medium items-center gap-5 text-sm">
           <li>
-            <Link href={"/"}>Home</Link>
+            <Link href={"/"} className={navLink("/")}>Home</Link>
           </li>
           <li>
-            <Link href={"/all-products"}>Products</Link>
+            <Link href={"/all-products"} className={navLink("/all-products")}>Products</Link>
           </li>
           <li>
-            <Link href={"/profile"}>My Profile</Link>
+            <Link href={"/profile"} className={navLink("/profile")} >My Profile</Link>
           </li>
         </ul>
 
@@ -85,13 +92,13 @@ const Navbar = () => {
       </nav>
       {open && (
         <div className="md:hidden flex flex-col items-center  bg-white border-t px-4 py-4 space-y-3 text-sm">
-          <Link href="/" onClick={() => setOpen(false)}>
+          <Link href="/" onClick={() => setOpen(false)} className={navLink("/")}>
             Home
           </Link>
-          <Link href="/all-products" onClick={() => setOpen(false)}>
+          <Link href="/all-products" onClick={() => setOpen(false)} className={navLink("/all-products")}>
             Products
           </Link>
-          <Link href="/profile" onClick={() => setOpen(false)}>
+          <Link href="/profile" onClick={() => setOpen(false)}className={navLink("/profile")}>
             My Profile
           </Link>
 
