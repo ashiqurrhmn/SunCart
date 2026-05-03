@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🌞 SunCart – Summer Product Store
 
-## Getting Started
+SunCart is a modern summer-themed e-commerce web app where users can explore seasonal products, view details, and manage their profile with authentication.
 
-First, run the development server:
+🔗 Live Site: https://sun-cart-six.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🎯 Purpose
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The goal of this project is to build a full-featured frontend application using Next.js App Router with authentication, protected routes, and a clean UI.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+It focuses on:
+- User authentication
+- Dynamic product display
+- Route protection
+- Smooth UI experience
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Key Features
 
-## Learn More
+🧭 Layout & Navigation
 
-To learn more about Next.js, take a look at the following resources:
+- Persistent Navbar & Footer across all pages
+- Navbar shows:
+   - Logo & navigation links (Home, Products, My Profile)
+   - User avatar & logout (if logged in)
+   - Login/Register buttons (if logged out)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Footer includes:
+   - Contact info
+   - Social links
+   - Privacy policy
+ 
+🏠 Home Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🌅 Hero section with summer sale highlights
 
-## Deploy on Vercel
+🔥 Popular products section (3 featured items)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🌿 Extra sections:
+- Summer Care Tips
+- Top Brands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔒 Protected Product Details
+
+Product details page is protected
+- Users must log in to access it
+- After login → redirected back to the intended page
+
+🔐 Authentication (BetterAuth)
+
+- Email & Password login
+- Google social login
+- Registration system with:
+   - Name
+   - Email
+   - Photo URL
+   - Password
+   - Error handling with messages/toasts
+ 
+✏️ Update Profile Feature
+Update user:
+- Name
+- Profile image
+- Implemented using BetterAuth user update system
+
+🎨 Animations
+- Smooth UI animations using Animate.css
+
+🛠️ Tech Stack
+
+⚛️ Next.js (App Router)
+🎨 Tailwind CSS
+🧩 DaisyUI / HeroUI
+🔐 BetterAuth
+🎞️ Animate.css
+
+📦 NPM Packages Used
+
+better-auth – Authentication system
+animate.css – UI animations
+react-icons – Icons
