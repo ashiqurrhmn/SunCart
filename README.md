@@ -1,80 +1,102 @@
-🌞 SunCart – Summer Product Store
+# SunCart
 
-SunCart is a modern summer-themed e-commerce web app where users can explore seasonal products, view details, and manage their profile with authentication.
+## Project Overview
 
-🔗 Live Site: https://sun-cart-six.vercel.app/
+SunCart is a modern full-stack e-commerce web application designed for browsing and purchasing summer products online. The project provides a smooth and responsive shopping experience with authentication, product management, and user-friendly UI.
 
-🎯 Purpose
+---
 
-The goal of this project is to build a full-featured frontend application using Next.js App Router with authentication, protected routes, and a clean UI.
+## Screenshot
 
-It focuses on:
-- User authentication
-- Dynamic product display
-- Route protection
-- Smooth UI experience
+<img width="2048" height="2048" alt="Gemini_Generated_Image_98aklm98aklm98ak" src="https://github.com/user-attachments/assets/5bf02e7a-f540-4a41-9630-883d3515a9a9" />
 
-🚀 Key Features
 
-🧭 Layout & Navigation
+---
 
-- Persistent Navbar & Footer across all pages
-- Navbar shows:
-   - Logo & navigation links (Home, Products, My Profile)
-   - User avatar & logout (if logged in)
-   - Login/Register buttons (if logged out)
+## Technologies Used
 
-- Footer includes:
-   - Contact info
-   - Social links
-   - Privacy policy
- 
-🏠 Home Page
+- Next.js
+- TypeScript
+- Tailwind CSS
+- MongoDB
+- Mongoose
+- NextAuth / Authentication
+- React
+- Node.js
 
-🌅 Hero section with summer sale highlights
+---
 
-🔥 Popular products section (3 featured items)
+## Main Features
 
-🌿 Extra sections:
-- Summer Care Tips
-- Top Brands
+- User authentication system
+- Responsive modern UI
+- Product browsing and management
+- Shopping cart functionality
+- Dynamic routing
+- Protected dashboard routes
+- Fast and optimized performance
+- Mobile-friendly design
 
-🔒 Protected Product Details
+---
 
-Product details page is protected
-- Users must log in to access it
-- After login → redirected back to the intended page
+## Dependencies
 
-🔐 Authentication (BetterAuth)
+- next
+- react
+- react-dom
+- tailwindcss
+- react-icons
+- next-auth
 
-- Email & Password login
-- Google social login
-- Registration system with:
-   - Name
-   - Email
-   - Photo URL
-   - Password
-   - Error handling with messages/toasts
- 
-✏️ Update Profile Feature
-Update user:
-- Name
-- Profile image
-- Implemented using BetterAuth user update system
+---
 
-🎨 Animations
-- Smooth UI animations using Animate.css
+## Run Locally
 
-🛠️ Tech Stack
+Clone the repository
 
-⚛️ Next.js (App Router)
-🎨 Tailwind CSS
-🧩 DaisyUI / HeroUI
-🔐 BetterAuth
-🎞️ Animate.css
+```bash
+git clone https://github.com/ashiqurrhmn/SunCart.git
+```
 
-📦 NPM Packages Used
+Go to the project directory
 
-better-auth – Authentication system
-animate.css – UI animations
-react-icons – Icons
+```bash
+cd SunCart
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env.local` file and add the required environment variables
+
+```env
+MONGODB_URI=your_mongodb_uri
+NEXTAUTH_SECRET=your_secret_key
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+Open your browser and visit
+
+```bash
+http://localhost:3000
+```
+
+Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Relevant Links
+
+- Live Site: https://sun-cart-six.vercel.app/
